@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>REST API Consume</title>
+
+    <meta property="og:title" content="A story of us"/>
+    <meta property="og:image"
+          content="https://images.unsplash.com/photo-1515815491543-9959ca08f466?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Fredericka+the+Great|Kalam" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        <a href="/" class="breadcrumb">Home</a>
+                        <a href="" class="breadcrumb" th:text="${id}">ID</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row s1">
+            <div class="col s12 m12">
+                <span><a href="/"><i class="material-icons">chevron_left</i></a></span>
+            </div>
+
+            <div class="col s12 m12">
+                <div class="card cyan darken-1">
+                    <div class="card-content white-text ">
+                        <p th:text="${message.getValue().getQuote()}">Content here</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <footer class="page-footer">
+
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 Copyright
+                <p>API consumed from: <a href="http://gturnquist-quoters.cfapps.io/api/" class="white-text">http://gturnquist-quoters.cfapps.io/api/</a>
+                </p>
+                <a class="white-text" href="https://github.com/Xavier-IV/spring-mvc-quotes" target="_blank">Github</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
